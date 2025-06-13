@@ -392,11 +392,7 @@ window.addEventListener("load", () => {
     });
   });
 
-  new fullpage('#fullpage', {
-    autoScrolling: true,
-    navigation: true,             
-    scrollingSpeed: 1000,
-    easingcss3: 'ease-in-out',
-    anchors: ['caution', 'banana'], 
-    responsiveWidth: 768          
-  });
+
+
+
+  

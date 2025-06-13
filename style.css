@@ -5,13 +5,9 @@
 }
 html,body{
     height: 100%;
+    overflow-x: hidden;
     width: 100%;
+    overscroll-behavior: none;
 }
-body {
-    cursor: url('./images/banana-cursor.png') 16 16, auto;
-}
-.confetti {
-    pointer-events: none;
-    transition: all 0.5s ease;
-  }
+
   
