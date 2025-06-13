@@ -1,123 +1,5 @@
-const trail = document.createElement("div");
-  trail.style.position = "fixed";
-  trail.style.width = "32px";
-  trail.style.height = "32px";
-  trail.style.backgroundImage = "url('./images/sparkle.png')";
-  trail.style.backgroundSize = "contain";
-  trail.style.pointerEvents = "none";
-  document.body.appendChild(trail);
 
-  document.addEventListener("mousemove", (e) => {
-    trail.style.left = `${e.clientX}px`;
-    trail.style.top = `${e.clientY}px`;
-  });
-//   window.addEventListener("load", () => {
-//     // Timeline
-//     const tl = gsap.timeline();
 
-//     // Animate Banana Image (bounce in)
-//     tl.from("img[alt='banana']", {
-//       y: -200,
-//       opacity: 0,
-//       duration: 1.2,
-//       ease: "bounce.out"
-//     });
-
-//     // Animate "CAUTION!" and "THIS BOOK IS BANANAS!"
-//     tl.from("h1", {
-//       scale: 0,
-//       opacity: 0,
-//       duration: 0.7,
-//       ease: "back.out(1.7)"
-//     }, "-=0.5");
-
-//     tl.from("h2", {
-//       scale: 0,
-//       opacity: 0,
-//       duration: 0.7,
-//       ease: "back.out(1.7)"
-//     }, "-=0.6");
-
-//     // Animate the 3 lines of text one by one
-//     tl.from(".text-yellow-300 p", {
-//       x: -100,
-//       opacity: 0,
-//       stagger: 0.3,
-//       duration: 0.6,
-//       ease: "power2.out"
-//     }, "-=0.4");
-
-//     // Animate Buy Me button (pop-in)
-//     tl.from("button", {
-//       scale: 0,
-//       duration: 0.6,
-//       ease: "elastic.out(1, 0.5)"
-//     });
-
-//     // Optional hover effect after animation
-//     gsap.to("button", {
-//       scale: 1.05,
-//       repeat: -1,
-//       yoyo: true,
-//       duration: 1,
-//       ease: "sine.inOut"
-//     });
-//   });
-//   const btn = document.getElementById("buyBtn");
-//   const burst = document.getElementById("burst");
-
-//   btn.addEventListener("click", () => {
-//     // Button press animation
-//     gsap.fromTo(btn, {
-//       scale: 1
-//     }, {
-//       scale: 1.2,
-//       rotate: 10,
-//       duration: 0.2,
-//       yoyo: true,
-//       repeat: 1,
-//       ease: "elastic.out(1, 0.4)"
-//     });
-
-//     // Fun spark burst animation
-//     const { top, left, width } = btn.getBoundingClientRect();
-//     burst.style.left = `${left + width / 2}px`;
-//     burst.style.top = `${top - 40}px`;
-
-//     gsap.fromTo(burst, {
-//       opacity: 1,
-//       scale: 0
-//     }, {
-//       opacity: 0,
-//       scale: 2,
-//       duration: 1,
-//       ease: "power1.out"
-//     });
-//   });
-//   gsap.to("#warning-strip", {
-//     xPercent: -50,
-//     repeat: -1,
-//     duration: 40,
-//     ease: "linear"
-//   });
-
-//   // Buy button sparkle effect
-//   const buyBtn = document.getElementById("buyBtn");
-//   const spark = document.getElementById("spark");
-
-//   buyBtn.addEventListener("click", () => {
-//     // Button scale bounce
-//     gsap.fromTo(buyBtn, 
-//       { scale: 1 }, 
-//       { scale: 1.15, duration: 0.2, ease: "power1.out", yoyo: true, repeat: 1 }
-//     );
-
-//     // Sparkle animation
-//     gsap.fromTo(spark, 
-//       { opacity: 1, scale: 0 },
-//       { opacity: 0, scale: 2, duration: 1, ease: "power1.out" }
-//     );
-//   });
 window.addEventListener("load", () => {
     const tl = gsap.timeline();
   
@@ -156,20 +38,24 @@ window.addEventListener("load", () => {
     });
   
  
-    tl.from("#buyBtn", {
-      scale: 0,
-      duration: 0.6,
-      ease: "elastic.out(1, 0.5)"
-    });
-  
    
-    gsap.to("#buyBtn", {
-      scale: 1.05,
-      repeat: -1,
-      yoyo: true,
-      duration: 1,
-      ease: "sine.inOut"
+    // Hover Animation — simple and interactive
+    btn.addEventListener("mouseenter", () => {
+      gsap.to(btn, {
+        scale: 1.08,
+        duration: 0.25,
+        ease: "power1.out"
+      });
     });
+    
+    btn.addEventListener("mouseleave", () => {
+      gsap.to(btn, {
+        scale: 1,
+        duration: 0.25,
+        ease: "power1.out"
+      });
+    });
+
   });
   
 
@@ -298,101 +184,174 @@ window.addEventListener("load", () => {
     gsap.to(logo, { rotate: 0, scale: 1, duration: 0.4, ease: "power1.out" });
   });
 
+  const logo2 = document.querySelector("img[alt='Just Say Banana Logo2']");
+  logo2.addEventListener("mouseenter", () => {
+    gsap.to(logo2, { rotate: -5, scale: 1.1, duration: 0.4, ease: "power1.out" });
+  });
+  logo2.addEventListener("mouseleave", () => {
+    gsap.to(logo2, { rotate: 0, scale: 1, duration: 0.4, ease: "power1.out" });
+  });
 
-  document.querySelector(".bg-white").addEventListener("click", () => {
-    const tl = gsap.timeline();
+  const logo3 = document.querySelector("img[alt='Just Say Banana Logo3']");
+  logo3.addEventListener("mouseenter", () => {
+    gsap.to(logo3, { rotate: -5, scale: 1.1, duration: 0.4, ease: "power1.out" });
+  });
+  logo3.addEventListener("mouseleave", () => {
+    gsap.to(logo3, { rotate: 0, scale: 1, duration: 0.4, ease: "power1.out" });
+  });
+
+  const logo4 = document.querySelector("img[alt='Just Say Banana Logo4']");
+  logo4.addEventListener("mouseenter", () => {
+    gsap.to(logo4, { rotate: -5, scale: 1.1, duration: 0.4, ease: "power1.out" });
+  });
+  logo4.addEventListener("mouseleave", () => {
+    gsap.to(logo4, { rotate: 0, scale: 1, duration: 0.4, ease: "power1.out" });
+  });
+
+  const logo5 = document.querySelector("img[alt='Just Say Banana Logo5']");
+  logo5.addEventListener("mouseenter", () => {
+    gsap.to(logo5, { rotate: -5, scale: 1.1, duration: 0.4, ease: "power1.out" });
+  });
+  logo5.addEventListener("mouseleave", () => {
+    gsap.to(logo5, { rotate: 0, scale: 1, duration: 0.4, ease: "power1.out" });
+  });
+
+  const logo6 = document.querySelector("img[alt='Just Say Banana Logo6']");
+  logo6.addEventListener("mouseenter", () => {
+    gsap.to(logo6, { rotate: -5, scale: 1.1, duration: 0.4, ease: "power1.out" });
+  });
+  logo6.addEventListener("mouseleave", () => {
+    gsap.to(logo6, { rotate: 0, scale: 1, duration: 0.4, ease: "power1.out" });
+  });
+
+  // document.querySelector(".bg-white").addEventListener("click", () => {
+  //   const tl = gsap.timeline();
 
 
-    tl.to("body", { backgroundColor: "#ffffff", duration: 0.1 });
-    tl.to("body", { backgroundColor: "#FFD900", duration: 0.3 });
+  //   tl.to("body", { backgroundColor: "#ffffff", duration: 0.1 });
+  //   tl.to("body", { backgroundColor: "#FFD900", duration: 0.3 });
 
-    tl.to(".relative", {
-      x: -10,
-      duration: 0.05,
-      repeat: 5,
+  //   tl.to(".relative", {
+  //     x: -10,
+  //     duration: 0.05,
+  //     repeat: 5,
+  //     yoyo: true,
+  //     ease: "power1.inOut"
+  //   });
+
+
+  //   tl.to(".bg-white", { scale: 0.95, duration: 0.1 }, "<");
+  //   tl.to(".bg-white", { scale: 1, duration: 0.1 });
+  // });
+
+
+
+  // gsap.from(".text-pink-500", {
+  //   x: -100,
+  //   opacity: 0,
+  //   duration: 1,
+  //   ease: "power2.out"
+  // });
+
+
+  // gsap.from(".w-1/2 img", {
+  //   x: 100,
+  //   opacity: 0,
+  //   duration: 1.2,
+  //   ease: "power2.out"
+  // });
+
+
+  // gsap.to(".text-white.font-bold", {
+  //   color: "#FF499C",
+  //   repeat: -1,
+  //   yoyo: true,
+  //   duration: 0.6,
+  //   ease: "power1.inOut"
+  // });
+
+
+  // gsap.from(".text-[#FF499C].font-bold", {
+  //   y: -5,
+  //   repeat: -1,
+  //   yoyo: true,
+  //   duration: 0.8,
+  //   ease: "power1.inOut"
+  // });
+
+
+  // const friendText = document.querySelector("span.font-bold.text-white");
+  // friendText.addEventListener("mouseenter", () => {
+  //   gsap.to(friendText, {
+  //     scale: 1.15,
+  //     rotate: -2,
+  //     duration: 0.4,
+  //     ease: "elastic.out(1, 0.5)"
+  //   });
+  // });
+  // friendText.addEventListener("mouseleave", () => {
+  //   gsap.to(friendText, {
+  //     scale: 1,
+  //     rotate: 0,
+  //     duration: 0.4,
+  //     ease: "power1.out"
+  //   });
+  // });
+
+
+  // const logo1 = document.querySelector("img[alt='Logo']");
+  // logo.addEventListener("mouseenter", () => {
+  //   gsap.to(logo1, {
+  //     rotate: -5,
+  //     scale: 1.05,
+  //     duration: 0.4,
+  //     ease: "power2.out"
+  //   });
+  // });
+  // logo1.addEventListener("mouseleave", () => {
+  //   gsap.to(logo1, {
+  //     rotate: 0,
+  //     scale: 1,
+  //     duration: 0.4,
+  //     ease: "power2.out"
+  //   });
+  // });
+
+
+  gsap.utils.toArray("img[src*='star.png']").forEach((star, i) => {
+    gsap.to(star, {
+      y: 15,
+      repeat: -1,
       yoyo: true,
-      ease: "power1.inOut"
+      duration: 1.5 + Math.random(),
+      ease: "sine.inOut",
+      delay: i * 0.2
     });
-
-
-    tl.to(".bg-white", { scale: 0.95, duration: 0.1 }, "<");
-    tl.to(".bg-white", { scale: 1, duration: 0.1 });
   });
 
 
-
-  gsap.from(".text-pink-500", {
-    x: -100,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
-  });
-
-
-  gsap.from(".w-1/2 img", {
-    x: 100,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power2.out"
-  });
-
-
-  gsap.to(".text-white.font-bold", {
-    color: "#FF499C",
+  gsap.to("img[src*='misc.png']", {
+    y: -12,
     repeat: -1,
     yoyo: true,
-    duration: 0.6,
-    ease: "power1.inOut"
+    duration: 1.4,
+    ease: "sine.inOut"
   });
-
-
-  gsap.from(".text-[#FF499C].font-bold", {
-    y: -5,
+  gsap.to("img[src*='white.png']", {
+    y: -12,
     repeat: -1,
     yoyo: true,
-    duration: 0.8,
-    ease: "power1.inOut"
+    duration: 1.4,
+    ease: "sine.inOut"
   });
 
-
-  const friendText = document.querySelector("span.font-bold.text-white");
-  friendText.addEventListener("mouseenter", () => {
-    gsap.to(friendText, {
-      scale: 1.15,
-      rotate: -2,
-      duration: 0.4,
-      ease: "elastic.out(1, 0.5)"
-    });
-  });
-  friendText.addEventListener("mouseleave", () => {
-    gsap.to(friendText, {
-      scale: 1,
-      rotate: 0,
-      duration: 0.4,
-      ease: "power1.out"
-    });
+  gsap.to("img[src*='boy.png']", {
+    y: -12,
+    repeat: -1,
+    yoyo: true,
+    duration: 2,
+    ease: "sine.inOut"
   });
 
-
-  const logo1 = document.querySelector("img[alt='Logo']");
-  logo.addEventListener("mouseenter", () => {
-    gsap.to(logo1, {
-      rotate: -5,
-      scale: 1.05,
-      duration: 0.4,
-      ease: "power2.out"
-    });
-  });
-  logo1.addEventListener("mouseleave", () => {
-    gsap.to(logo1, {
-      rotate: 0,
-      scale: 1,
-      duration: 0.4,
-      ease: "power2.out"
-    });
-  });
-
-
-
-
+ 
   
