@@ -16,11 +16,13 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
 
+  <link rel="stylesheet" href="response.css">
+
 
 </head>
 
-<body class = "">
-
+<body class="">
+  <!-- 
   <div id="loader">
     
     <img class="floating-image" src="images/star.png" style="top: 10%; left: 20%;" />
@@ -53,14 +55,14 @@
       <span class="letter pink">N</span>
       <span class="letter pink">A</span>
     </div>
-  </div>
+  </div> -->
 
 
   <div id="main-content">
-    <div id="book" class="h-[100vh] w-[100vw]">
+    <div id="book" class="fw-screen">
 
       <!-- Section -1 -->
-      <div>
+      <div id="section1">
         <div>
           <div
             class=" section pink-section w-full h-[86px] bg-[#FFD900] flex items-center overflow-hidden whitespace-nowrap">
@@ -87,7 +89,7 @@
           <div
             class="relative w-full min-h-[calc(100vh-86px)] bg-[#FF499C] flex flex-col items-center justify-center px-4 pt-24 sm:pt-20 pb-10 text-center">
             <img src="images/just_say_banana.png" alt="Just Say Banana Logo"
-              class="absolute w-[120px] sm:w-[140px] md:w-[176px] h-auto top-[16px] sm:top-[24px] left-[16px] sm:left-[24px]" />
+              class="absolute w-[120px] sm:w-[140px] md:w-[176px] h-auto top-[16px] sm:top-[24px] left-[16px] sm:left-[24px] logo" />
             <div style="font-family: 'Gloria Hallelujah', cursive, sans-serif;" class="max-w-[90%]">
               <h1
                 class="text-white text-[36px] sm:text-[54px] md:text-[90px] leading-tight uppercase font-normal break-words">
@@ -116,11 +118,11 @@
 
 
       <!-- SECTION 2: Scroll Down Banana Page -->
-      <div>
+      <div class="section2">
         <div
           class="section yellow-section relative w-full min-h-screen flex flex-col items-center justify-center bg-[#FFD900] px-4 text-center overflow-hidden">
           <img src="images/just_say_banana.png" alt="Just Say Banana Logo2"
-            class="absolute w-[180px] sm:w-[220px] md:w-[250px] top-[24px] left-[24px]" />
+            class="absolute w-[180px] sm:w-[220px] md:w-[250px] top-[24px] left-[24px] logo" />
           <img src="images/star.png" alt="Star"
             class="absolute w-[28px] sm:w-[34px] md:w-[40px] top-[180px] right-[20px] sm:right-[60px] md:right-[240px]" />
           <img src="images/shine.png" alt="Shine"
@@ -132,18 +134,18 @@
           <img src="images/white.png" alt="Banana"
             class="absolute w-[36px] sm:w-[48px] md:w-[60px] top-[290px] left-[20px] sm:left-[80px] md:left-[100px]" />
           <h1
-            class="text-[42px]  text-white sm:text-[54px] md:text-[64px] leading-tight font-bold mt-[120px] sm:mt-[140px] z-10"
+            class="text-[42px]  text-white sm:text-[54px] md:text-[64px] leading-tight font-bold mt-[120px] sm:mt-[140px] "
             style="font-family: 'Gloria Hallelujah', cursive;">
             WAIT <span id="breathe" class="text-[#FF499C]">BREATHE...</span> and
           </h1>
-          <h2 class="text-[42px] sm:text-[54px] md:text-[64px] leading-tight font-bold text-[#FF499C] mb-10 z-10"
+          <h2 class="text-[42px] sm:text-[54px] md:text-[64px] leading-tight font-bold text-[#FF499C] mb-10 "
             style="font-family: 'Gloria Hallelujah', cursive;">
             just say BANANA
           </h2>
-          <div class="p-1 rounded-full bg-white cursor-pointer hover:scale-105 transition-transform duration-300 z-10">
+          <div class="p-1 rounded-full bg-white cursor-pointer hover:scale-105 transition-transform duration-300 ">
             <div
-              class="relative w-[200px] sm:w-[230px] md:w-[250px] h-[55px] sm:h-[58px] md:h-[61px] rounded-full bg-[#FF499C] flex items-center justify-center shadow-md overflow-hidden">
-              <span class="text-white font-bold text-md sm:text-lg tracking-widest z-10"
+              class="relative w-fit rounded-full p-[1rem] bg-[#FF499C] flex items-center justify-center shadow-md overflow-hidden">
+              <span class="text-white font-bold text-md sm:text-lg tracking-widest "
                 style="font-family: 'Gloria Hallelujah', cursive;">
                 PREVIEW
               </span>
@@ -157,7 +159,7 @@
 
       <!-- SECTION 3: Just Say BANANA (Without Images) -->
 
-      <div>
+      <div id="section3">
         <div
           class="relative w-full h-screen bg-[#ff40a1] flex flex-col items-center justify-center px-4 overflow-hidden text-center">
           <img src="images/star.png" class="absolute top-[5%] left-[6%] w-[30px] sm:w-[40px]" />
@@ -166,40 +168,39 @@
           <img src="images/star.png" class="absolute bottom-[15%] left-[14%] w-[30px] sm:w-[40px]" />
           <img src="images/star.png" class="absolute top-[20%] left-[80%] w-[40px] sm:w-[48px]" />
           <img src="images/just_say_banana.png" alt="Just Say Banana Logo3"
-            class="absolute top-4 left-4 w-[160px] sm:w-[220px] md:w-[250px] h-auto z-10" />
-          <h1 class="mt-32 text-[42px] sm:text-[60px] md:text-[88px] font-normal leading-tight text-white z-10"
+            class="absolute top-4 left-4 w-[160px] sm:w-[220px] md:w-[250px] h-auto logo" />
+          <h1 class="mt-32 text-[42px] sm:text-[60px] md:text-[88px] font-normal leading-tight text-white "
             style="font-family: 'Gloria Hallelujah', cursive;">
             Just say <span class="text-[#FFD900] font-bold">BANANA</span>
           </h1>
-          <p class="mt-10 max-w-[950px] text-[18px] sm:text-[24px] md:text-[36px] leading-[1.5] text-[#FFD900] z-10"
+          <p class="mt-10 text-[18px] sm:text-[24px] md:text-[36px] leading-[1.5] text-[#FFD900] "
             style="font-family: 'Gloria Hallelujah', cursive;">
             is a <span class="text-white">laugh-out-loud</span> book that hands you the
             <span class="text-white">silliest trick</span> for managing anger –
             so you <span class="text-white">don't</span> end up saying something
             you'll wish you could take back.
           </p>
-          <div
-            class="relative mt-10 px-6 sm:px-10 py-4 sm:py-5 bg-yellow-300 rounded-full shadow-md max-w-[90%] sm:max-w-[600px] z-10">
+          <div class="relative mt-10 px-6 sm:px-10 py-4 sm:py-5 bg-yellow-300 rounded-full shadow-md ">
             <img src="images/misc.png" alt="misc decoration" class="absolute -top-3 -left-3 w-[40px] sm:w-[50px]" />
             <p class="text-[18px] sm:text-[22px] md:text-[26px] text-white tracking-tight"
               style="font-family: 'Gloria Hallelujah', cursive;">
               like That’s it, I’m moving to the <span class="text-[#ff40a1] font-bold">MOON!</span>
             </p>
           </div>
-          <img src="images/boy.png" alt="Boy saying banana"
-            class="hidden md:block absolute bottom-0 right-0 w-[260px] md:w-[337px] h-auto z-10" />
+          <img src="images/boy.png" alt="Boy saying banana" id="banana_boy"
+            class="hidden md:block absolute bottom-0 right-0 w-[260px] md:w-[337px] h-auto " />
         </div>
       </div>
 
 
 
       <!-- SECTION 4-->
-      <div>
+      <div id="section4">
         <div
           class="w-full h-screen flex flex-col md:flex-row bg-yellow-400 font-['Gloria_Hallelujah'] relative overflow-hidden"
           id="animated-section">
           <img src="images/just_say_banana.png" alt="Just Say Banana Logo4"
-            class="absolute top-4 left-4 sm:top-6 sm:left-6 w-[140px] sm:w-[180px] md:w-[250px] h-auto z-10 logo" />
+            class="absolute top-4 left-4 sm:top-6 sm:left-6 w-[140px] sm:w-[180px] md:w-[250px] h-auto  logo" />
           <div
             class="w-full md:w-1/2 flex-1 pt-24 sm:pt-28 md:pt-32 px-5 sm:px-8 md:px-12 pb-10 text-[#FF499C] text-[20px] sm:text-[24px] md:text-[28px] leading-relaxed flex flex-col justify-center z-0 text-content">
             <p class="mb-6 sm:mb-8 pr-2 sm:pr-6 md:pr-10">
@@ -228,11 +229,11 @@
 
 
       <!-- SECTION 5: Who’s Behind This Banana Madness -->
-      <div>
+      <div id="section5">
         <div
           class="relative w-full h-screen bg-[#FF499C] text-white font-['Gloria_Hallelujah'] px-6 py-8 overflow-hidden flex flex-col justify-between ">
           <img src="./images/just_say_banana.png" alt="Just Say Banana Logo5"
-            class="w-[150px] h-auto mb-6 md:w-[191px] md:h-[104px]" />
+            class="w-[150px] h-auto mb-6 md:w-[191px] md:h-[104px] class logo" />
           <div class="flex flex-col">
             <h2 class="text-[#FFD900] md:text-[55px] text-[2rem] font-bold tracking-wide mb-3">
               WHO’S BEHIND THIS BANANA MADNESS?
@@ -268,35 +269,38 @@
                   Schwartz (thank You!)
                 </p>
               </div>
-              <div class="w-full md:w-1/3 flex justify-center items-start">
-                <img src="./images/krisiti.jpg" alt="Kristi"
+              <div class="w-full md:w-1/3 flex justify-center items-center flex-col">
+                <img src="./images/krisiti.jpg" alt="Kristi" id="author"
                   class="w-[260px] h-[260px] object-cover rounded-full border-[6px] border-yellow-300">
+                <div class="mt-4 md:text-[18px] text-[0.6rem] text-[#FFD900] pr-2 md:pr-10">
+                  <p>
+                    For more info on <span class="text-white">Kristi</span> visit <br>
+                    www.theloftent.com or <br>
+                    follow <span class="text-white">@theloftent</span> & <span class="text-white">@kristikaylor</span>.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="mt-4 md:text-[18px] text-[0.6rem] text-[#FFD900] text-right pr-2 md:pr-10">
-            For more info on <span class="text-white">Kristi</span> visit <br>
-            www.theloftent.com or <br>
-            follow <span class="text-white">@theloftent</span> & <span class="text-white">@kristikaylor</span>.
-          </div>
+          <div></div>
         </div>
       </div>
 
 
       <!-- SECTION 6: -->
-      <div>
+      <div id="section6">
         <div
           class="relative w-full min-h-screen bg-yellow-300 font-['Gloria_Hallelujah'] flex flex-col justify-between">
           <img src="./images/just_say_banana.png" alt="Just Say Banana Logo6"
-            class="absolute top-4 left-4 w-[140px] sm:w-[180px] h-auto" />
+            class="absolute top-4 left-4 w-[140px] sm:w-[180px] h-auto logo" />
           <div></div>
           <div class="flex flex-col md:flex-row px-4 sm:px-8 pt-10 h-full">
-            <div class="w-full md:w-1/2 flex items-center justify-center relative mb-12 md:mb-0">
+            <div class="w-full md:w-2/5 flex items-center justify-stretch relative mb-12 md:mb-0">
               <img src="./images/book1.png" alt="Book"
-                class="w-[220px] sm:w-[280px] md:w-[350px] h-auto drop-shadow-xl mt-24 md:mt-0 md:ml-8" />
+                class="w-[220px] sm:w-[280px] md:w-[350px] h-auto drop-shadow-xl mt-24 md:mt-0 md:ml-8 book" />
             </div>
-            <div class="w-full md:w-1/2 flex flex-col justify-center items-center text-center gap-4 px-4 sm:px-8 pb-10">
-              <p class="text-white text-[1.2rem] sm:text-[36px] md:text-[48px] leading-snug max-w-[90%]">
+            <div class="w-full flex flex-col justify-center items-center text-center gap-4 px-4 sm:px-8 pb-10">
+              <p class="text-white text-[1.2rem] sm:text-[36px] md:text-[48px] leading-snug max-w-[90%] readysetgo">
                 <span class="text-[#FF499C] font-bold">Ready?</span> Set.
                 Go!<br>
                 Just click the link below to <span class="text-[#FF499C] font-bold">Amazon</span><br>
@@ -307,7 +311,8 @@
                 <img src="images/arrow1.png" alt="Arrow1"
                   class="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[40px] sm:w-[50px]" />
                 <a href="https://www.amazon.com" target="_blank"
-                  class="relative flex items-center justify-center bg-pink-400 text-white text-[20px] sm:text-[22px] px-8 sm:px-12 py-3 sm:py-4 rounded-full border-4 border-white font-semibold transition hover:scale-105 shadow-md min-w-[200px] sm:min-w-[240px]">
+                  class="relative flex items-center justify-center bg-pink-400 text-white text-[20px] sm:text-[22px] px-8 sm:px-12 py-3 sm:py-4 rounded-full border-4 border-white font-semibold transition hover:scale-105 shadow-md min-w-[200px] sm:min-w-[240px]"
+                  id="buyBtn">
                   Buy me
                   <img src="images/misc1.png" alt="misc2"
                     class="absolute right-[-40px] top-1/2 transform -translate-y-1/2 w-[35px] sm:w-[40px]" />
@@ -315,7 +320,7 @@
               </div>
             </div>
           </div>
-          <div
+          <footer
             class="w-full bg-pink-500 text-white text-sm sm:text-base px-6 sm:px-10 py-3 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
             <p class="text-center sm:text-left" style="font-family: Inter;">All rights reserved The Loft Agency LLC, ©
               2025
@@ -326,7 +331,7 @@
               <a href="#" class="hover:underline" style="font-family: Inter;">Privacy Policy</a>
               <i class="fa-brands fa-instagram"></i>
             </div>
-          </div>
+          </footer>
         </div>
       </div>
 

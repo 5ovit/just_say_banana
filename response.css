@@ -1,0 +1,144 @@
+@media only screen and (min-width: 1440px) {
+    .logo {
+        width: 360px !important;
+        height: auto !important;
+    }
+
+    #section1 h1, #section1 h2 {
+        font-size: 96px;
+    }
+
+    #section1 p {
+        font-size: 56px;
+    }
+
+    #buyBtn {
+        font-size: 40px;
+    }
+
+    .section2 h1, .section2 h2 {
+        font-size: 120px
+    }
+
+    .section div span {
+        font-size: 44px !important;
+        padding: 5px 60px;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    #section3 h1 {
+        font-size: 120px;
+    }
+
+    #section3 p {
+        font-size: 50px;
+    }
+
+    #banana_boy {
+        height: 400px;
+        width: 400px;
+        Right: -70px;
+        Bottom: -10px;
+    }
+
+    #section4 p {
+        font-size: 34px;
+    }
+    
+    #section5 h2 {
+        font-size: 70px;
+    }
+    
+    #section5 p {
+        font-size: 28px;
+    }
+
+    #author {
+        width: 350px;
+        height: 350px;
+    }
+
+    #section6 p.readysetgo {
+        font-size: 70px !important;
+    }
+
+    #section6 .book {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    .logo {
+        width: 480px !important;
+    }
+
+    #section1 h1, #section1 h2 {
+        font-size: 140px;
+    }
+
+    #section1 p {
+        font-size: 86px;
+    }
+
+    #buyBtn {
+        font-size: 66px;
+    }
+
+    .section2 h1, .section2 h2 {
+        font-size: 200px;
+    }
+
+    .section div span {
+        font-size: 66px !important;
+        padding: 35px 80px;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    #section3 h1 {
+        font-size: 180px;
+    }
+
+    #section3 p {
+        font-size: 90px;
+    }
+
+    #banana_boy {
+        height: 700px;
+        width: 700px;
+        Right: -100px;
+        Bottom: -20px;
+    }
+
+    #section4 p {
+        font-size: 60px;
+    }
+    
+    #section5 h2 {
+        font-size: 120px;
+    }
+    
+    #section5 p {
+        font-size: 46px;
+    }
+
+    #author {
+        width: 500px;
+        height: 500px;
+    }
+
+    #section6 p.readysetgo {
+        font-size: 120px !important;
+    }
+
+    #section6 .book {
+        width: 800px;
+    }
+
+    footer {
+        font-size: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+}
