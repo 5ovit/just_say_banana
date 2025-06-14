@@ -421,10 +421,12 @@ function setAnimating() {
   isAnimating = true;
   setTimeout(() => {
     isAnimating = false;
-  }, DURATION*1000);
+  }, DURATION * 1000);
 }
 
-function nextSection(selector) {
+function nextSection() {
+  secId++;
+  const selector = SECTIONS[secId];
   gsap.fromTo(selector, {
     top: '100vh',
   }, {
@@ -434,7 +436,9 @@ function nextSection(selector) {
   setAnimating();
 }
 
-function prevSection(selector) {
+function prevSection() {
+  const selector = SECTIONS[secId];
+  secId--;
   gsap.fromTo(selector, {
     top: 0,
   }, {
@@ -444,16 +448,69 @@ function prevSection(selector) {
   setAnimating();
 }
 
-const DELTATHRESHOLD = 1
+const DELTATHRESHOLDWHEEL = 1
 window.addEventListener('wheel', e => {
-  if(isAnimating) return;
+  if (isAnimating) return;
 
-  if(e.deltaY > DELTATHRESHOLD && secId < SECTIONS.length-1) {
-    secId++;
-    nextSection(SECTIONS[secId]);
+  if (e.deltaY > DELTATHRESHOLDWHEEL && secId < SECTIONS.length - 1) {
+    nextSection();
   }
-  if(e.deltaY < -DELTATHRESHOLD && secId > 0) {
-    prevSection(SECTIONS[secId]);
-    secId--;
+  if (e.deltaY < -DELTATHRESHOLDWHEEL && secId > 0) {
+    prevSection();
   }
 })
+
+const DELTATHRESHOLDTOUCH = 30; // pixels for touch
+let touchStartY = 0;
+
+window.addEventListener('touchstart', (e) => {
+  touchStartY = e.touches[0].clientY;
+});
+
+window.addEventListener('touchend', (e) => {
+  const touchEndY = e.changedTouches[0].clientY;
+  const deltaY = touchStartY - touchEndY;
+
+  if (isAnimating) return;
+
+  if (deltaY > DELTATHRESHOLDTOUCH && secId < SECTIONS.length - 1) {
+    nextSection();
+  }
+  if (deltaY < -DELTATHRESHOLDTOUCH && secId > 0) {
+    prevSection();
+  }
+});
+
+
+window.addEventListener('keydown', function (e) {
+
+  if (e.keyCode == 37)
+    nextSection();
+  else if (e.keyCode == 39)
+    prevSection();
+
+});
+
+let prevX = 0
+let prevY = 0
+
+window.addEventListener('pointerdown', function (e) {
+  prevX = e.clientX;
+  prevY = e.clientY;
+  // console.log(e)
+})
+
+window.addEventListener('pointerup', function (e) {
+
+  // console.log(e);
+  let w = window.innerWidth;
+  let h = window.innerHeight;
+  let y = e.clientY;
+  let x = e.clientX;
+
+  if (y < prevY)
+    nextSection();
+  else if (y > prevY)
+    prevSection();
+
+});
