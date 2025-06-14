@@ -353,60 +353,60 @@ window.addEventListener("load", () => {
     ease: "sine.inOut"
   });
 
-  // window.addEventListener("load", () => {
-  //   const logo = document.getElementById("logo");
-  //   const letters = document.querySelectorAll(".letter");
-  //   const loader = document.getElementById("loader");
-  //   const main = document.getElementById("main-content");
+  window.addEventListener("load", () => {
+    const logo = document.getElementById("logo");
+    const letters = document.querySelectorAll(".letter");
+    const loader = document.getElementById("loader");
+    const main = document.getElementById("main-content");
 
-  //   const tl = gsap.timeline();
+    const tl = gsap.timeline();
 
-  //   // Floating background image animations (infinite loop)
-  //   gsap.utils.toArray(".floating-image").forEach(img => {
-  //     gsap.to(img, {
-  //       y: "+=20",
-  //       duration: 3,
-  //       repeat: -1,
-  //       yoyo: true,
-  //       ease: "sine.inOut",
-  //       delay: Math.random()
-  //     });
-  //   });
+    // Floating background image animations (infinite loop)
+    gsap.utils.toArray(".floating-image").forEach(img => {
+      gsap.to(img, {
+        y: "+=20",
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        delay: Math.random()
+      });
+    });
 
-  //   // Logo bounce in
-  //   tl.to(logo, {
-  //     y: 0,
-  //     opacity: 1,
-  //     scale: 1,
-  //     duration: 1.2,
-  //     ease: "bounce.out",
-  //     from: { y: -200, scale: 1.4 }
-  //   });
+    // Logo bounce in
+    tl.to(logo, {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 1.2,
+      ease: "bounce.out",
+      from: { y: -200, scale: 1.4 }
+    });
 
-  //   // Animate letters one by one
-  //   tl.to(letters, {
-  //     opacity: 1,
-  //     stagger: 0.1,
-  //     duration: 0.3,
-  //     ease: "power2.out"
-  //   });
+    // Animate letters one by one
+    tl.to(letters, {
+      opacity: 1,
+      stagger: 0.1,
+      duration: 0.3,
+      ease: "power2.out"
+    });
 
-  //   // Slide loader up to reveal main site
-  //   tl.to(loader, {
-  //     y: "-100%",
-  //     duration: 1.2,
-  //     delay: 0.5,
-  //     ease: "power2.inOut",
-  //     onComplete: () => {
-  //       gsap.set("#loader", { display: "none" });
-  //       gsap.to("#main-content", {
-  //         opacity: 1,
-  //         visibility: "visible",
-  //         duration: 0.5,
-  //         ease: "power1.out"
-  //       });
-  //       document.body.style.overflow = "auto";
-  //     }
+    // Slide loader up to reveal main site
+    tl.to(loader, {
+      y: "-100%",
+      duration: 1.2,
+      delay: 0.5,
+      ease: "power2.inOut",
+      onComplete: () => {
+        gsap.set("#loader", { display: "none" });
+        gsap.to("#main-content", {
+          opacity: 1,
+          visibility: "visible",
+          duration: 0.5,
+          ease: "power1.out"
+        });
+        document.body.style.overflow = "auto";
+      }
       
-  //   });
-  // });
+    });
+  });
