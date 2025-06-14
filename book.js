@@ -3,24 +3,32 @@ $(window).ready(function () {
     $('#book').turn({
         display: 'single',
         acceleration: true,
-        duration: 4000,
+        duration: 1000,
         gradients: true,
         when: {
             turned: function (e, page,) {
                 // console.log(e)
             }
-        }
+        },
+        peel: 'br',
     });
     $('#book').turn('peel', 'br');
 });
 
+function nextPage() {
+    $('#book').turn('next');
+}
+
+function prevPage() {
+    $('#book').turn('previous');
+}
 
 window.addEventListener('keydown', function (e) {
 
     if (e.keyCode == 37)
-        $('#book').turn('previous');
+        prevPage();
     else if (e.keyCode == 39)
-        $('#book').turn('next');
+        nextPage();
 
 });
 
@@ -42,13 +50,13 @@ window.addEventListener('pointerup', function (e) {
     let x = e.clientX;
 
     if (y < prevY)
-        $('#book').turn('next');
+        nextPage();
     else if (y > prevY)
-        $('#book').turn('previous');
+        prevPage();
     else if (x > w / 2)
-        $('#book').turn('next');
+        nextPage();
     else
-        $('#book').turn('previous');
+        prevPage();
 
 });
 
@@ -58,9 +66,9 @@ window.addEventListener('wheel', function (e) {
     const now = Date.now();
     if (now - lastCall >= delay) {
         if (e.deltaY > 0)
-            $('#book').turn('next');
+            nextPage();
         else
-            $('#book').turn('previous');
+            prevPage();
         lastCall = now
     }
 })
