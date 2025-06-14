@@ -412,9 +412,4 @@ window.addEventListener("load", () => {
   // });
   new fullpage('#main-content', {
     autoScrolling: true,
-    navigation: true,
-    anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6'],
-    navigationPosition: 'right',
-    scrollingSpeed: 700,
-    
   });
