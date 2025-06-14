@@ -410,6 +410,3 @@ window.addEventListener("load", () => {
       
   //   });
   // });
-  new fullpage('#main-content', {
-    autoScrolling: true,
-  });
