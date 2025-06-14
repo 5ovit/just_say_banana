@@ -1,38 +1,178 @@
-@media only screen and (min-width: 1440px) {
-    .logo {
-        width: 360px !important;
-        height: auto !important;
+@media only screen and (max-width: 768px) {
+    
+    #section5 h2 {
+        font-size: 20px;
     }
 
+    #author {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
     #section1 h1, #section1 h2 {
-        font-size: 96px;
+        font-size: 50px;
     }
 
     #section1 p {
-        font-size: 56px;
+        font-size: 26px;
     }
 
     #buyBtn {
-        font-size: 40px;
+        font-size: 20px;
     }
 
     .section2 h1, .section2 h2 {
-        font-size: 120px
+        font-size: 60px
     }
 
     .section div span {
-        font-size: 44px !important;
+        font-size: 22px !important;
+        padding: 1px 30px;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    #section3 h1 {
+        font-size: 60px;
+    }
+
+    #section3 p {
+        font-size: 28px;
+    }
+
+    #banana_boy {
+        height: 200px;
+        width: 200px;
+        Right: -50px;
+        Bottom: -10px;
+    }
+
+    #section4 p {
+        font-size: 16px;
+    }
+    
+    #section5 h2 {
+        font-size: 40px;
+    }
+    
+    #section5 p {
+        font-size: 15px;
+    }
+
+    #author {
+        width: 150px;
+        height: 150px;
+    }
+
+    #section6 p.readysetgo {
+        font-size: 35px !important;
+    }
+
+    #section6 .book {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #section1 h1, #section1 h2 {
+        font-size: 66px;
+    }
+
+    #section1 p {
+        font-size: 36px;
+    }
+
+    #buyBtn {
+        font-size: 22px;
+    }
+
+    .section2 h1, .section2 h2 {
+        font-size: 70px
+    }
+
+    .section div span {
+        font-size: 32px !important;
+        padding: 2px 50px;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    #section3 h1 {
+        font-size: 90px;
+    }
+
+    #section3 p {
+        font-size: 30px;
+    }
+
+    #banana_boy {
+        height: 300px;
+        width: 300px;
+        Right: -70px;
+        Bottom: -10px;
+    }
+
+    #section4 p {
+        font-size: 22px;
+    }
+    
+    #section5 h2 {
+        font-size: 50px;
+    }
+    
+    #section5 p {
+        font-size: 16px;
+    }
+
+    #author {
+        width: 200px;
+        height: 200px;
+    }
+
+    #section6 p.readysetgo {
+        font-size: 40px !important;
+    }
+
+    #section6 .book {
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    #section1 h1, #section1 h2 {
+        font-size: 86px;
+    }
+
+    #section1 p {
+        font-size: 50px;
+    }
+
+    #buyBtn {
+        font-size: 35px;
+    }
+
+    .section2 h1, .section2 h2 {
+        font-size: 110px
+    }
+
+    .section div span {
+        font-size: 38px !important;
         padding: 5px 60px;
         width: auto !important;
         height: auto !important;
     }
 
     #section3 h1 {
-        font-size: 120px;
+        font-size: 110px;
     }
 
     #section3 p {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     #banana_boy {
@@ -43,15 +183,15 @@
     }
 
     #section4 p {
-        font-size: 34px;
+        font-size: 30px;
     }
     
     #section5 h2 {
-        font-size: 70px;
+        font-size: 60px;
     }
     
     #section5 p {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     #author {
@@ -60,7 +200,7 @@
     }
 
     #section6 p.readysetgo {
-        font-size: 70px !important;
+        font-size: 62px !important;
     }
 
     #section6 .book {
