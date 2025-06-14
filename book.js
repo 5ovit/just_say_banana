@@ -7,7 +7,7 @@ $(window).ready(function () {
         gradients: true,
         when: {
             turned: function (e, page,) {
-                console.log(e)
+                // console.log(e)
             }
         }
     });
@@ -24,3 +24,43 @@ window.addEventListener('keydown', function (e) {
 
 });
 
+let prevX = 0
+let prevY = 0
+
+window.addEventListener('pointerdown', function (e) {
+    prevX = e.clientX;
+    prevY = e.clientY;
+    // console.log(e)
+})
+
+window.addEventListener('pointerup', function (e) {
+
+    // console.log(e);
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+    let y = e.clientY;
+    let x = e.clientX;
+
+    if (y < prevY)
+        $('#book').turn('next');
+    else if (y > prevY)
+        $('#book').turn('previous');
+    else if (x > w / 2)
+        $('#book').turn('next');
+    else
+        $('#book').turn('previous');
+
+});
+
+var lastCall = 0;
+const delay = 800;
+window.addEventListener('wheel', function (e) {
+    const now = Date.now();
+    if (now - lastCall >= delay) {
+        if (e.deltaY > 0)
+            $('#book').turn('next');
+        else
+            $('#book').turn('previous');
+        lastCall = now
+    }
+})
