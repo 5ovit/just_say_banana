@@ -37,7 +37,7 @@
         font-size: 60px
     }
 
-    .section div span {
+    #previewbtn {
         font-size: 22px !important;
         padding: 1px 30px;
         width: auto !important;
@@ -103,7 +103,7 @@
         font-size: 70px
     }
 
-    .section div span {
+    #previewbtn {
         font-size: 32px !important;
         padding: 2px 50px;
         width: auto !important;
@@ -169,7 +169,7 @@
         font-size: 110px
     }
 
-    .section div span {
+    #previewbtn {
         font-size: 38px !important;
         padding: 5px 60px;
         width: auto !important;
@@ -247,7 +247,7 @@
         font-size: 200px;
     }
 
-    .section div span {
+    #previewbtn {
         font-size: 66px !important;
         padding: 35px 80px;
         width: auto !important;
