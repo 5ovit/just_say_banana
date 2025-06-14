@@ -196,7 +196,7 @@
     }
     
     #section5 h2 {
-        font-size: 60px;
+        font-size: 50px;
     }
     
     #section5 p {
@@ -204,8 +204,8 @@
     }
 
     #author {
-        width: 350px;
-        height: 350px;
+        width: 330px;
+        height: 330px;
     }
 
     #section6 p.readysetgo {
@@ -213,7 +213,7 @@
     }
 
     #section6 .book {
-        width: 400px;
+        width: 360px;
     }
 }
 
