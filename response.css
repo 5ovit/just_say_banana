@@ -222,6 +222,14 @@
         width: 480px !important;
     }
 
+    #logo {
+        width: 900px !important;
+    }
+    
+    .letter {
+        font-size: 56px !important;
+    }
+
     #section1 h1, #section1 h2 {
         font-size: 140px;
     }
