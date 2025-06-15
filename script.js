@@ -438,7 +438,7 @@ function flipNext() {
   })
 
   gsap.to(`${SECTIONS[secId]}>.peel`, {
-    xPercent: -150,
+    x: -window.innerWidth*1,
     boxShadow: '-1px 0px 12px #0008',
     duration: DURATION,
     ease: "expoScale(1,2,none)",
@@ -463,7 +463,7 @@ function flipPrev() {
   })
 
   gsap.to(`${SECTIONS[secId]}>.peel`, {
-    xPercent: 0,
+    x: window.innerWidth*0.99,
     duration: DURATION,
     ease: "expoScale(1,2,none)",
   })

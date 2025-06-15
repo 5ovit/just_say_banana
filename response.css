@@ -322,11 +322,11 @@
 .peel {
     position: absolute;
     background-color: yellow;
-    height: 200vh;
+    height: 200vh !important;
     z-index: 9;
     top: 0px;
     left: 0px;
-    transform: translateX(100%) translateY(4%) rotateZ(4deg);
+    transform: translateX(99%);
     box-shadow: -1px 0px 12px #0002;
 
 }
