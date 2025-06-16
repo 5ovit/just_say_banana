@@ -483,27 +483,6 @@ window.addEventListener('wheel', e => {
   }
 })
 
-const DELTATHRESHOLDTOUCH = 30; // pixels for touch
-let touchStartY = 0;
-
-window.addEventListener('touchstart', (e) => {
-  touchStartY = e.touches[0].clientY;
-});
-
-window.addEventListener('touchend', (e) => {
-  const touchEndY = e.changedTouches[0].clientY;
-  const deltaY = touchStartY - touchEndY;
-
-  if (isAnimating) return;
-
-  if (deltaY > DELTATHRESHOLDTOUCH && secId < SECTIONS.length - 1) {
-    flipNext();
-  }
-  if (deltaY < -DELTATHRESHOLDTOUCH && secId > 0) {
-    flipPrev();
-  }
-});
-
 
 window.addEventListener('keydown', function (e) {
 
@@ -528,9 +507,9 @@ window.addEventListener('pointerup', function (e) {
   let y = e.clientY;
   let x = e.clientX;
 
-  if (y < prevY)
+  if (y - prevY < prevX - x)
     flipNext();
-  else if (y > prevY)
+  else
     flipPrev();
 
 });
